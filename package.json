@@ -1,0 +1,29 @@
+{
+  "name": "piratelang",
+  "displayName": "PirateLang",
+  "description": "Pirate Language Support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pirate",
+      "aliases": ["Pirate", "pirate"],
+      "extensions": [".pirate"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pirate",
+      "scopeName": "source.pirate",
+      "path": "./syntaxes/pirate.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/vscode.git"
+  }
+}
