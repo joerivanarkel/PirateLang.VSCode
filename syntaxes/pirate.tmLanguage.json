@@ -1,0 +1,129 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pirate",
+	"scopeName": "source.pirate",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#integers"
+		},
+		{
+			"include": "#function"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pirate",
+					"match": "\\b(if|elif|else|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.control.pirate",
+					"match": "\\b(and|or|to)\\b"
+				},
+				{
+					"name": "keyword.other.pirate",
+					"match": "\\b(var|string|int|float)\\b"
+				}
+			]
+		},
+		"function": {
+			"patterns": [
+				{
+					"begin": "\\b(?:(local)\\s+)?(func)\\b(?![,:])",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.local.lua"
+						},
+						"2": {
+							"name": "keyword.control.lua"
+						}
+					},
+					"end": "(?<=[\\)\\-{}\\[\\]\"'])",
+					"name": "meta.function.lua",
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"begin": "(\\()",
+							"beginCaptures": {
+								"1": {
+									"name": "punctuation.definition.parameters.begin.lua"
+								}
+							},
+							"end": "(\\))|(?=[\\-\\.{}\\[\\]\"'])",
+							"endCaptures": {
+								"1": {
+									"name": "punctuation.definition.parameters.finish.lua"
+								}
+							},
+							"name": "meta.parameter.lua",
+							"patterns": [
+								{
+									"include": "#comment"
+								},
+								{
+									"match": "[a-zA-Z_][a-zA-Z0-9_]*",
+									"name": "variable.parameter.function.lua"
+								},
+								{
+									"match": ",",
+									"name": "punctuation.separator.arguments.lua"
+								},
+								{
+									"begin": ":",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.separator.arguments.lua"
+										}
+									},
+									"end": "(?=[\\),])",
+									"patterns": [
+										{
+											"include": "#luadoc.type"
+										}
+									]
+								}
+							]
+						},
+						{
+							"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*(?=:)",
+							"name": "entity.name.class.lua"
+						},
+						{
+							"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+							"name": "entity.name.function.lua"
+						}
+					]
+				}
+			]
+		},
+		
+		"integers": {
+				"patterns": [
+					{
+						"name": "constant.numeric.pirate",
+						"match": "\\b[0-9]\\b"
+					}
+				]
+			},
+			"strings": {
+				"name": "string.quoted.double.pirate",
+				"begin": "\"",
+				"end": "\"",
+				"patterns": [
+					{
+						"name": "constant.character.escape.pirate",
+						"match": "\\\\."
+					}
+				]
+			}
+		}
+	}
