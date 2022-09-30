@@ -21,7 +21,13 @@
       "language": "pirate",
       "scopeName": "source.pirate",
       "path": "./syntaxes/pirate.tmLanguage.json"
-    }]
+    }],
+    "snippets": [
+      {
+        "language": "pirate",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
   },
   "repository": {
     "type": "git",

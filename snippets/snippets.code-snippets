@@ -1,0 +1,84 @@
+{
+	"Function": {
+		"prefix": "func",
+		"body": [
+			"func ${1:funcName}()",
+			"{",
+            "   ${2}",
+            "}"
+		],
+		"description": "function"
+	},
+    "Class": {
+		"prefix": "class",
+		"body": [
+			"class ${1:className}()",
+			"{",
+            "   ${2}",
+            "}"
+		],
+		"description": "class"
+	},
+    "If Statement": {
+		"prefix": "if",
+		"body": [
+			"if(${1:condition})",
+			"{",
+            "   ${2}",
+            "}"
+		],
+		"description": "if-statement"
+	},
+    "Else If Statement": {
+		"prefix": "elif",
+		"body": [
+			"elif(${1:condition})",
+			"{",
+            "   ${2}",
+            "}"
+		],
+		"description": "elif-statement"
+	},
+    "Else Statement": {
+		"prefix": "else",
+		"body": [
+			"else",
+			"{",
+            "   ${1}",
+            "}"
+		],
+		"description": "else-statement"
+	},
+    "For Loop": {
+		"prefix": "for",
+		"body": [
+			"for(var ${1:varName} = ${2:start} to ${3:length})",
+			"{",
+            "   ${4}",
+            "}"
+		],
+		"description": "for-loop"
+	},
+    "Foreach Loop": {
+		"prefix": "foreach",
+		"body": [
+			"foreach(var ${1:varName} in ${2:collection})",
+			"{",
+            "   ${3}",
+            "}"
+		],
+		"description": "foreach-loop"
+	},
+    "While Loop": {
+		"prefix": "while",
+		"body": [
+			"while(${1:condition})",
+			"{",
+            "   ${2}",
+            "}"
+		],
+		"description": "while-loop"
+	},
+    
+    
+}
