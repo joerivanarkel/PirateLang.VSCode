@@ -2,7 +2,7 @@
   "name": "piratelang",
   "displayName": "PirateLang",
   "description": "Pirate Language Support",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "publisher": "joerivanarkel",
   "engines": {
     "vscode": "^1.71.0"
