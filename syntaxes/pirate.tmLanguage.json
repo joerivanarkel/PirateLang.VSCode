@@ -14,6 +14,9 @@
 		},
 		{
 			"include": "#function"
+		},
+		{
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -21,22 +24,27 @@
 			"patterns": [
 				{
 					"name": "keyword.control.pirate",
-					"match": "\\b(if|elif|else|while|for|return)\\b"
+					"match": "\\b(if|elif|else|while|for|return|import|foreach)\\b"
 				},
 				{
 					"name": "keyword.control.pirate",
-					"match": "\\b(and|or|to)\\b"
+					"match": "\\b(and|or|to|in)\\b"
 				},
 				{
 					"name": "keyword.other.pirate",
 					"match": "\\b(var|string|int|float)\\b"
+				}
+                ,
+				{
+					"name": "constant.language",
+					"match": "\\b(true|True|false|False)\\b"
 				}
 			]
 		},
 		"function": {
 			"patterns": [
 				{
-					"begin": "\\b(?:(local)\\s+)?(func)\\b(?![,:])",
+					"begin": "\\b(?:(local)\\s+)?(func|class)\\b(?![,:])",
 					"beginCaptures": {
 						"1": {
 							"name": "keyword.local.lua"
@@ -107,23 +115,29 @@
 		},
 		
 		"integers": {
-				"patterns": [
-					{
-						"name": "constant.numeric.pirate",
-						"match": "\\b[0-9]\\b"
-					}
-				]
-			},
-			"strings": {
-				"name": "string.quoted.double.pirate",
-				"begin": "\"",
-				"end": "\"",
-				"patterns": [
-					{
-						"name": "constant.character.escape.pirate",
-						"match": "\\\\."
-					}
-				]
-			}
+			"patterns": [
+				{
+					"name": "constant.numeric.pirate",
+					"match": "\\b[0-9]\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pirate",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": 
+            [
+				{
+					"name": "constant.character.escape.pirate",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"name": "comment",
+			"begin": "//",
+			"end": ";"
 		}
 	}
+}
