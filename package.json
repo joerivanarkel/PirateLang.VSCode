@@ -2,20 +2,25 @@
   "name": "piratelang",
   "displayName": "PirateLang",
   "description": "Pirate Language Support",
-  "version": "0.0.1",
+  "version": "0.1.4",
   "publisher": "joerivanarkel",
   "engines": {
     "vscode": "^1.71.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [{
       "id": "pirate",
-      "aliases": ["Pirate", "pirate"],
+      "aliases": ["Pirate", "pirate", "PirateLang", "piratelang"],
       "extensions": [".pirate"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/pirate.png",
+        "dark": "./icons/pirate.png"
+      }
     }],
     "grammars": [{
       "language": "pirate",
