@@ -12,7 +12,7 @@
     "Snippets"
   ],
   "contributes": {
-    "languages": [
+  "languages": [
       {
         "id": "pirate",
         "aliases": [
