@@ -2,7 +2,7 @@
   "name": "piratelang",
   "displayName": "PirateLang",
   "description": "Pirate Language Support",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "joerivanarkel",
   "engines": {
     "vscode": "^1.71.0"
@@ -12,21 +12,32 @@
     "Snippets"
   ],
   "contributes": {
-    "languages": [{
-      "id": "pirate",
-      "aliases": ["Pirate", "pirate", "PirateLang", "piratelang"],
-      "extensions": [".pirate"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./icons/pirate.png",
-        "dark": "./icons/pirate.png"
+  "languages": [
+      {
+        "id": "pirate",
+        "aliases": [
+          "Pirate",
+          "pirate",
+          "PirateLang",
+          "piratelang"
+        ],
+        "extensions": [
+          ".pirate"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/pirate_dark.png",
+          "dark": "./icons/pirate_light.png"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "pirate",
-      "scopeName": "source.pirate",
-      "path": "./syntaxes/pirate.tmLanguage.json"
-    }],
+    ],
+    "grammars": [
+      {
+        "language": "pirate",
+        "scopeName": "source.pirate",
+        "path": "./syntaxes/pirate.tmLanguage.json"
+      }
+    ],
     "snippets": [
       {
         "language": "pirate",
