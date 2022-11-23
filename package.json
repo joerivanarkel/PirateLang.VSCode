@@ -2,7 +2,7 @@
   "name": "piratelang",
   "displayName": "PirateLang",
   "description": "Pirate Language Support",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "joerivanarkel",
   "engines": {
     "vscode": "^1.71.0"
@@ -26,8 +26,8 @@
         ],
         "configuration": "./language-configuration.json",
         "icon": {
-          "light": "./icons/pirate_dark.png",
-          "dark": "./icons/pirate_light.png"
+          "light": "./icons/grid_0 black.png",
+          "dark": "./icons/grid_0 white.png"
         }
       }
     ],
