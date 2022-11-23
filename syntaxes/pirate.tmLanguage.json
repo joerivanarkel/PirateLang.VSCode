@@ -17,6 +17,9 @@
 		},
 		{
 			"include": "#comment"
+		},
+		{
+			"include": "#libraries"
 		}
 	],
 	"repository": {
@@ -33,11 +36,18 @@
 				{
 					"name": "keyword.other.pirate",
 					"match": "\\b(var|string|int|float)\\b"
-				}
-                ,
+				},
 				{
 					"name": "constant.language",
 					"match": "\\b(true|True|false|False)\\b"
+				}
+			]
+		},
+		"libraries": {
+			"patterns": [
+				{
+					"name": "entity.name.class",
+					"match": "\\b(IO)\\b"
 				}
 			]
 		},
